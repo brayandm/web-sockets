@@ -18,7 +18,12 @@
   },
   "homepage": "https://github.com/brayandm/web-sockets#readme",
   "dependencies": {
+    "eslint": "^8.40.0",
     "http": "^0.0.1-security",
+    "typescript": "^5.0.4",
     "ws": "^8.13.0"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.5.5"
   }
 }
