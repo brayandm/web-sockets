@@ -20,6 +20,7 @@
   "dependencies": {
     "eslint": "^8.40.0",
     "http": "^0.0.1-security",
+    "ts-node": "^10.9.1",
     "typescript": "^5.0.4",
     "ws": "^8.13.0"
   },
