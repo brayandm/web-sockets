@@ -17,7 +17,13 @@ server.on("connection", (connection) => {
 
   connection.on("message", (message) => {
     console.log("Message received:", message);
-    connection.send("Answer from server: " + message);
+
+    connection.binaryType = "arraybuffer";
+
+    const arrayBuffer = new ArrayBuffer(123); // Tu ArrayBuffer de ejemplo
+    const blob = new Blob([arrayBuffer]);
+
+    connection.send(arrayBuffer);
   });
 });
 
