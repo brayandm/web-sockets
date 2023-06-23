@@ -1,14 +1,15 @@
-import WebSocket from 'ws';
+import WebSocket from "ws";
 
-const server = new WebSocket.Server({ port: 8080 });
+const server = new WebSocket.Server({ port: Number(process.env.PORT!) });
 
-server.on('connection', (connection) => {
+console.log(process.env.PORT!);
 
-  connection.on('message', (message) => {
-    console.log('Message received:', message);
+server.on("connection", (connection) => {
+  connection.on("message", (message) => {
+    console.log("Message received:", message);
     // Envía un mensaje de respuesta al cliente
-    connection.send('Answer from server: ' + message);
+    connection.send("Answer from server: " + message);
   });
 });
 
-console.log('Server running on port 8080');
+console.log("Server running on port 8080");
