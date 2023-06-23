@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/brayandm/web-sockets#readme",
   "dependencies": {
+    "dotenv": "^16.3.1",
     "eslint": "^8.40.0",
     "http": "^0.0.1-security",
     "ts-node": "^10.9.1",

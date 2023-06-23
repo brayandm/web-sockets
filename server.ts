@@ -1,8 +1,9 @@
+import * as dotenv from "dotenv";
 import WebSocket from "ws";
 
-const server = new WebSocket.Server({ port: Number(process.env.PORT!) });
+dotenv.config();
 
-console.log(process.env.PORT!);
+const server = new WebSocket.Server({ port: Number(process.env.PORT!) });
 
 server.on("connection", (connection) => {
   connection.on("message", (message) => {
